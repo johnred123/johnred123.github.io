@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/software-git/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-02-29T23:25:34+08:00</updated>
+  <id>http://localhost:4000/tag/software-git/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">路人A的点滴记录 | </title>
+  
+
+  
+    <subtitle>记录我的一些经历</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Git Clone断点续传</title>
+      <link href="http://localhost:4000/git-clone-break" rel="alternate" type="text/html" title="Git Clone断点续传" />
+      <published>2019-07-23T23:32:00+08:00</published>
+      <updated>2019-07-23T23:32:00+08:00</updated>
+      <id>http://localhost:4000/git-clone-break</id>
+      <content type="html" xml:base="http://localhost:4000/git-clone-break">&lt;p&gt;实现Git工具的断点续传功能&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Git clone _url_&lt;/code&gt;在克隆大容量代码库或者网络状况不好的时候经常出现中断的情况，但是git默认的clone
+功能是不能断点续传的，一旦出错就会清空之前的花费大量时间下载下来的代码。&lt;/p&gt;
+
+&lt;p&gt;但是git中fetch功能是可以实现增量下载的，因此可以使用fetch命令来间接达到断点续传的功能。&lt;/p&gt;
+
+&lt;p&gt;实现一：&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;user&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init &lt;span class=&quot;c&quot;&gt;# 在当前目录下建立一个空的git库&lt;/span&gt;
+user&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote add git://_url_.git &lt;span class=&quot;c&quot;&gt;# 将需要下载的git代码库地址加入本地代码库的远程端&lt;/span&gt;
+user&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git fetch &lt;span class=&quot;nt&quot;&gt;--all&lt;/span&gt;
+user&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout origrl master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;实现二：&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;user&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init &lt;span class=&quot;c&quot;&gt;# 在当前目录下建立一个空的git库&lt;/span&gt;
+user&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git fetch git://_url_.git &lt;span class=&quot;c&quot;&gt;# 将需要下载的git代码库地址加入本地代码库的远程端     &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在个人使用git库的时候，大多数情况下是只需要当前某个分支的最新代码，而并不一定需要所有的代码历史记录，这时我们就可以使用fetch命令的options(设置选项)&lt;code class=&quot;highlighter-rouge&quot;&gt;--depth=&amp;lt;n&amp;gt;&lt;/code&gt;，将N设置为1，即只获取最新代码，可以减少clone不必要代码所需要花费的时间。&lt;/p&gt;
+
+&lt;p&gt;当然为了继续加速下载过程，我们可以使用&lt;code class=&quot;highlighter-rouge&quot;&gt;git fetch --jobs=&amp;lt;n&amp;gt; _url_git_&lt;/code&gt;命令，进行并行下载。&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Liam Hudson</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software-git" />
+      
+
+      
+        <summary type="html">实现Git工具的断点续传功能</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

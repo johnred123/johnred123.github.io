@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/dirver/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-02-29T23:25:34+08:00</updated>
+  <id>http://localhost:4000/tag/dirver/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">路人A的点滴记录 | </title>
+  
+
+  
+    <subtitle>记录我的一些经历</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Linux内核驱动开发之 驱动与用户间的数据传递</title>
+      <link href="http://localhost:4000/linux-kernel-driver-api-copy_to_user-and-copy_from_user" rel="alternate" type="text/html" title="Linux内核驱动开发之 驱动与用户间的数据传递" />
+      <published>2013-03-03T06:12:00+08:00</published>
+      <updated>2013-03-03T06:12:00+08:00</updated>
+      <id>http://localhost:4000/linux-kernel-driver-api-copy_to_user-and-copy_from_user</id>
+      <content type="html" xml:base="http://localhost:4000/linux-kernel-driver-api-copy_to_user-and-copy_from_user">&lt;p&gt;linux内核驱动开发之 驱动与用户间的数据传递&lt;/p&gt;
+
+&lt;h2 id=&quot;copy_from_user&quot;&gt;copy_from_user()&lt;/h2&gt;
+
+&lt;p&gt;copy_from_user()能将用户空间的数据传入内核空间&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;asm/uaccess.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// void *to: 内核空间地址
+// const void __user *from: 用户空间地址
+// unsigned long n: 需要传的字节大小
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;copy_from_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;copy_to_user&quot;&gt;copy_to_user()&lt;/h2&gt;
+
+&lt;p&gt;copy_to_user()能将内核空间的数据传入用户空间&lt;/p&gt;
+
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;asm/uaccess.h&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// void *to: 内核空间地址
+// const void __user *from: 用户空间地址
+// unsigned long n: 需要传的字节大小
+&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;copy_to_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;          
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Liam Hudson</name>
+        
+        
+      </author>
+
+      
+        <category term="[&quot;linux&quot;]" />
+      
+
+      
+        <category term="dirver" />
+      
+
+      
+        <summary type="html">linux内核驱动开发之 驱动与用户间的数据传递</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

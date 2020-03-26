@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>我理解的PCB工程师分级</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="记录我的一些经历" />
+    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="http://localhost:4000/pcb-standard" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="路人A的点滴记录" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="我理解的PCB工程师分级" />
+    <meta property="og:description" content="我所理解的PCB工程师金字塔分级标准 入门级PCB工程师 能力要求： 能制作简单的封装，如DIP10等到； 掌握至少一种PCB设计软件的基本操作，并能制订简单的布线线宽和间距等规则； 能对具有100个元件和200个网络或以下PCB进行较合理和有序的布局和布线； 能在他人或自定规则下手动或自动布线并修改，达到100%布通并DRC完全通过； 具备基本的机械结构和热设计知识； 掌握双面板走线的一些基本要求。 工作内容： 简单PCB的设计和修改（如结构简音的前面板、单片机小系统板等）； 复杂PCB中规定部分的走线； 与自己设计PCB相关的调试； 写相关的开发、调试日志。 工作职责： 对PCB中自己设计部分负责。 初级PCB工程师 能力要求： 能根据手册和实物制作较复杂的封装，如带灯RJ-45座等，并保证外形、焊盘等尺寸完全正确（按实物测量至少保证可插入）； 较熟悉掌握至少一种PCB设计软件并能独立或在指导下制订较详细的布线规则； 能对具有400个元件和1000个网络或以下单、双面和多层PCB进行较合理和有序的布局和布线，能在布局布线过程中随时考虑到热设计、结构设计、电磁兼容性设计、美观等方面的要求，自己不能确定时及时向更高级PCB工程师请教或共同探讨； 能在他人或自定规则下熟练手动或自动布线并修改，达到100%布通并DRC完全通过，基本上不存在线宽瓶颈、内层孤岛等问题，布线过程中能看出少量原理设计上低级错误并提出，并能正确进行引脚和门交换，能正确修改网络表和原理图； 能正确导入、导出机械图纸并基本看懂结构尺寸要求； 能在他人所制定规则或指导下进行一些高速和模拟PCB设计并基本稳定； 丝印标志清晰明了，能独立完成出GERBER等设计输出工作并校对； 具备基本的可制造性方面知识并用于实践，所设计板子50%以上可用于生产。 工作内容： 较复杂PCB的设计和修改（如调度机中除CPU板外的板，十六画面分割器板等）； 复杂PCB中规定部分的走线； 与自己设计PCB相关的调试； 对所有更低级PCB工程师的工作指导； 写相关的开发、调试日志； 必要时（指自己一定时间内暂时无相应的设计任务，或某一PCB设计工作时间紧迫，必须抽调或加强设计人员时，下同）妆任任意低级PCB工程师的工作。 工作职责： 对PCB中自己设计部分负责。 中级PCB工程师（可根据个人具体能力现细分为A、B、C三档，A最高，B次之） 能力要求： 能完全看懂各种原版器件手册和布线手册，能独立制作极复杂的封装，如放置开关，并保证各种能力完全正确（按实物测量至少保证插入），能自行根据原理和结构要求寻找合适器件或替换品； 熟练掌握至少一种PCB设计软件的操作和技巧并能制订详细的布线规则； 能根据系统要求提出各功能板块划分和整合意见，能对任意多个元件和网络的PCB独立或分工进行合理和各功能板块布局和布线，能在布局布线过程中随时考虑热设计、结构设计、SI、PI、EMC、美观、可制造性等方面的要求并提出解决方案，能对入门级和初级PCB工程师提供一些布局和布线中的要求和规则参考等； 能正确进行板的叠层结构设计，并在满足性能要求下尽量减少层数、降低成本； 具有较多的阻抗、时延、过冲、串扰、环路、信号回路、平面完整性、内层分割槽隙、信号端接等方面的高速和模拟PCB设计知识，能独立或在SI工程师等指导下完成关键信号和区域的SI仿真和分析并提出改进意见； 能在规则驱动下熟练手动或自动布线并修改通过，整板具有一定的美感，布线过程中能看出原理设计中80%以上低级错误并提出，能熟练正确进行引脚和门交换； 能与原理和结构设计工程师极好沟通，能看懂较复杂的机械图纸，并能提出一些原理、器件选择和结构上与PCB设计有关的合理改进意见，帮助系统设计早日成功； 测试点和丝印标记清晰明了、无差错，极少犯PCB设计中的低级错误，一般不会因PCB设计错误导致改版，对9）%以上的PCB加工厂家工程总是回馈能自行解决； 具备较多的可制造性方面知识并用天实践，所设计板子70%以上可用于直接量产。 工作内容： 极复杂PCB的设计和修改（如8路DVR底板、PC主板等）； 与自己设计PCB相关的调试和指定部分的SI仿真； 对所有更低级PCB工程师的工作指导和布线规则提供；" />
+    <meta property="og:url" content="http://localhost:4000/pcb-standard" />
+    <meta property="og:image" content="http://localhost:4000/assets/images/welcome.jpg" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2015-06-20T22:18:00+08:00" />
+    <meta property="article:modified_time" content="2015-06-20T22:18:00+08:00" />
+    <meta property="article:tag" content="Hardware" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="我理解的PCB工程师分级" />
+    <meta name="twitter:description" content="我所理解的PCB工程师金字塔分级标准 入门级PCB工程师 能力要求： 能制作简单的封装，如DIP10等到； 掌握至少一种PCB设计软件的基本操作，并能制订简单的布线线宽和间距等规则； 能对具有100个元件和200个网络或以下PCB进行较合理和有序的布局和布线； 能在他人或自定规则下手动或自动布线并修改，达到100%布通并DRC完全通过； 具备基本的机械结构和热设计知识； 掌握双面板走线的一些基本要求。 工作内容： 简单PCB的设计和修改（如结构简音的前面板、单片机小系统板等）； 复杂PCB中规定部分的走线； 与自己设计PCB相关的调试； 写相关的开发、调试日志。 工作职责： 对PCB中自己设计部分负责。 初级PCB工程师 能力要求： 能根据手册和实物制作较复杂的封装，如带灯RJ-45座等，并保证外形、焊盘等尺寸完全正确（按实物测量至少保证可插入）； 较熟悉掌握至少一种PCB设计软件并能独立或在指导下制订较详细的布线规则； 能对具有400个元件和1000个网络或以下单、双面和多层PCB进行较合理和有序的布局和布线，能在布局布线过程中随时考虑到热设计、结构设计、电磁兼容性设计、美观等方面的要求，自己不能确定时及时向更高级PCB工程师请教或共同探讨； 能在他人或自定规则下熟练手动或自动布线并修改，达到100%布通并DRC完全通过，基本上不存在线宽瓶颈、内层孤岛等问题，布线过程中能看出少量原理设计上低级错误并提出，并能正确进行引脚和门交换，能正确修改网络表和原理图； 能正确导入、导出机械图纸并基本看懂结构尺寸要求； 能在他人所制定规则或指导下进行一些高速和模拟PCB设计并基本稳定； 丝印标志清晰明了，能独立完成出GERBER等设计输出工作并校对； 具备基本的可制造性方面知识并用于实践，所设计板子50%以上可用于生产。 工作内容： 较复杂PCB的设计和修改（如调度机中除CPU板外的板，十六画面分割器板等）； 复杂PCB中规定部分的走线； 与自己设计PCB相关的调试； 对所有更低级PCB工程师的工作指导； 写相关的开发、调试日志； 必要时（指自己一定时间内暂时无相应的设计任务，或某一PCB设计工作时间紧迫，必须抽调或加强设计人员时，下同）妆任任意低级PCB工程师的工作。 工作职责： 对PCB中自己设计部分负责。 中级PCB工程师（可根据个人具体能力现细分为A、B、C三档，A最高，B次之） 能力要求： 能完全看懂各种原版器件手册和布线手册，能独立制作极复杂的封装，如放置开关，并保证各种能力完全正确（按实物测量至少保证插入），能自行根据原理和结构要求寻找合适器件或替换品； 熟练掌握至少一种PCB设计软件的操作和技巧并能制订详细的布线规则； 能根据系统要求提出各功能板块划分和整合意见，能对任意多个元件和网络的PCB独立或分工进行合理和各功能板块布局和布线，能在布局布线过程中随时考虑热设计、结构设计、SI、PI、EMC、美观、可制造性等方面的要求并提出解决方案，能对入门级和初级PCB工程师提供一些布局和布线中的要求和规则参考等； 能正确进行板的叠层结构设计，并在满足性能要求下尽量减少层数、降低成本； 具有较多的阻抗、时延、过冲、串扰、环路、信号回路、平面完整性、内层分割槽隙、信号端接等方面的高速和模拟PCB设计知识，能独立或在SI工程师等指导下完成关键信号和区域的SI仿真和分析并提出改进意见； 能在规则驱动下熟练手动或自动布线并修改通过，整板具有一定的美感，布线过程中能看出原理设计中80%以上低级错误并提出，能熟练正确进行引脚和门交换； 能与原理和结构设计工程师极好沟通，能看懂较复杂的机械图纸，并能提出一些原理、器件选择和结构上与PCB设计有关的合理改进意见，帮助系统设计早日成功； 测试点和丝印标记清晰明了、无差错，极少犯PCB设计中的低级错误，一般不会因PCB设计错误导致改版，对9）%以上的PCB加工厂家工程总是回馈能自行解决； 具备较多的可制造性方面知识并用天实践，所设计板子70%以上可用于直接量产。 工作内容： 极复杂PCB的设计和修改（如8路DVR底板、PC主板等）； 与自己设计PCB相关的调试和指定部分的SI仿真； 对所有更低级PCB工程师的工作指导和布线规则提供；" />
+    <meta name="twitter:url" content="http://localhost:4000/" />
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/welcome.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="路人A的点滴记录" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Hardware" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "路人A的点滴记录",
+        "logo": "http://localhost:4000/assets/images/blog-icon.png"
+    },
+    "url": "http://localhost:4000/pcb-standard",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:4000/assets/images/welcome.jpg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:4000/pcb-standard"
+    },
+    "description": "我所理解的PCB工程师金字塔分级标准 入门级PCB工程师 能力要求： 能制作简单的封装，如DIP10等到； 掌握至少一种PCB设计软件的基本操作，并能制订简单的布线线宽和间距等规则； 能对具有100个元件和200个网络或以下PCB进行较合理和有序的布局和布线； 能在他人或自定规则下手动或自动布线并修改，达到100%布通并DRC完全通过； 具备基本的机械结构和热设计知识； 掌握双面板走线的一些基本要求。 工作内容： 简单PCB的设计和修改（如结构简音的前面板、单片机小系统板等）； 复杂PCB中规定部分的走线； 与自己设计PCB相关的调试； 写相关的开发、调试日志。 工作职责： 对PCB中自己设计部分负责。 初级PCB工程师 能力要求： 能根据手册和实物制作较复杂的封装，如带灯RJ-45座等，并保证外形、焊盘等尺寸完全正确（按实物测量至少保证可插入）； 较熟悉掌握至少一种PCB设计软件并能独立或在指导下制订较详细的布线规则； 能对具有400个元件和1000个网络或以下单、双面和多层PCB进行较合理和有序的布局和布线，能在布局布线过程中随时考虑到热设计、结构设计、电磁兼容性设计、美观等方面的要求，自己不能确定时及时向更高级PCB工程师请教或共同探讨； 能在他人或自定规则下熟练手动或自动布线并修改，达到100%布通并DRC完全通过，基本上不存在线宽瓶颈、内层孤岛等问题，布线过程中能看出少量原理设计上低级错误并提出，并能正确进行引脚和门交换，能正确修改网络表和原理图； 能正确导入、导出机械图纸并基本看懂结构尺寸要求； 能在他人所制定规则或指导下进行一些高速和模拟PCB设计并基本稳定； 丝印标志清晰明了，能独立完成出GERBER等设计输出工作并校对； 具备基本的可制造性方面知识并用于实践，所设计板子50%以上可用于生产。 工作内容： 较复杂PCB的设计和修改（如调度机中除CPU板外的板，十六画面分割器板等）； 复杂PCB中规定部分的走线； 与自己设计PCB相关的调试； 对所有更低级PCB工程师的工作指导； 写相关的开发、调试日志； 必要时（指自己一定时间内暂时无相应的设计任务，或某一PCB设计工作时间紧迫，必须抽调或加强设计人员时，下同）妆任任意低级PCB工程师的工作。 工作职责： 对PCB中自己设计部分负责。 中级PCB工程师（可根据个人具体能力现细分为A、B、C三档，A最高，B次之） 能力要求： 能完全看懂各种原版器件手册和布线手册，能独立制作极复杂的封装，如放置开关，并保证各种能力完全正确（按实物测量至少保证插入），能自行根据原理和结构要求寻找合适器件或替换品； 熟练掌握至少一种PCB设计软件的操作和技巧并能制订详细的布线规则； 能根据系统要求提出各功能板块划分和整合意见，能对任意多个元件和网络的PCB独立或分工进行合理和各功能板块布局和布线，能在布局布线过程中随时考虑热设计、结构设计、SI、PI、EMC、美观、可制造性等方面的要求并提出解决方案，能对入门级和初级PCB工程师提供一些布局和布线中的要求和规则参考等； 能正确进行板的叠层结构设计，并在满足性能要求下尽量减少层数、降低成本； 具有较多的阻抗、时延、过冲、串扰、环路、信号回路、平面完整性、内层分割槽隙、信号端接等方面的高速和模拟PCB设计知识，能独立或在SI工程师等指导下完成关键信号和区域的SI仿真和分析并提出改进意见； 能在规则驱动下熟练手动或自动布线并修改通过，整板具有一定的美感，布线过程中能看出原理设计中80%以上低级错误并提出，能熟练正确进行引脚和门交换； 能与原理和结构设计工程师极好沟通，能看懂较复杂的机械图纸，并能提出一些原理、器件选择和结构上与PCB设计有关的合理改进意见，帮助系统设计早日成功； 测试点和丝印标记清晰明了、无差错，极少犯PCB设计中的低级错误，一般不会因PCB设计错误导致改版，对9）%以上的PCB加工厂家工程总是回馈能自行解决； 具备较多的可制造性方面知识并用天实践，所设计板子70%以上可用于直接量产。 工作内容： 极复杂PCB的设计和修改（如8路DVR底板、PC主板等）； 与自己设计PCB相关的调试和指定部分的SI仿真； 对所有更低级PCB工程师的工作指导和布线规则提供；"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+    <!-- 数学公式 -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+        }
+        });
+    </script>
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="我理解的PCB工程师分级" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon.png" alt="路人A的点滴记录" /></a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-getting-started" role="menuitem"><a href="/tag/">Tags</a></li>
+    <li class="nav-try-ghost" role="menuitem"><a href="https://ghost.org">Try Ghost</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+        </div>
+        
+            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full post ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="20 June 2015">20 June 2015</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/hardware/'>HARDWARE</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">我理解的PCB工程师分级</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/assets/images/welcome.jpg)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <h1 id="我所理解的pcb工程师金字塔分级标准">我所理解的PCB工程师金字塔分级标准</h1>
+
+<h2 id="入门级pcb工程师">入门级PCB工程师</h2>
+
+<h3 id="能力要求">能力要求：</h3>
+<ol>
+  <li>能制作简单的封装，如DIP10等到；</li>
+  <li>掌握至少一种PCB设计软件的基本操作，并能制订简单的布线线宽和间距等规则；</li>
+  <li>能对具有100个元件和200个网络或以下PCB进行较合理和有序的布局和布线；</li>
+  <li>能在他人或自定规则下手动或自动布线并修改，达到100%布通并DRC完全通过；</li>
+  <li>具备基本的机械结构和热设计知识；</li>
+  <li>掌握双面板走线的一些基本要求。</li>
+</ol>
+
+<h3 id="工作内容">工作内容：</h3>
+<ol>
+  <li>简单PCB的设计和修改（如结构简音的前面板、单片机小系统板等）；</li>
+  <li>复杂PCB中规定部分的走线；</li>
+  <li>与自己设计PCB相关的调试；</li>
+  <li>写相关的开发、调试日志。</li>
+</ol>
+
+<h3 id="工作职责">工作职责：</h3>
+<p>对PCB中自己设计部分负责。</p>
+
+<h2 id="初级pcb工程师">初级PCB工程师</h2>
+
+<h3 id="能力要求-1">能力要求：</h3>
+<ol>
+  <li>能根据手册和实物制作较复杂的封装，如带灯RJ-45座等，并保证外形、焊盘等尺寸完全正确（按实物测量至少保证可插入）；</li>
+  <li>较熟悉掌握至少一种PCB设计软件并能独立或在指导下制订较详细的布线规则；</li>
+  <li>能对具有400个元件和1000个网络或以下单、双面和多层PCB进行较合理和有序的布局和布线，能在布局布线过程中随时考虑到热设计、结构设计、电磁兼容性设计、美观等方面的要求，自己不能确定时及时向更高级PCB工程师请教或共同探讨；</li>
+  <li>能在他人或自定规则下熟练手动或自动布线并修改，达到100%布通并DRC完全通过，基本上不存在线宽瓶颈、内层孤岛等问题，布线过程中能看出少量原理设计上低级错误并提出，并能正确进行引脚和门交换，能正确修改网络表和原理图；</li>
+  <li>能正确导入、导出机械图纸并基本看懂结构尺寸要求；</li>
+  <li>能在他人所制定规则或指导下进行一些高速和模拟PCB设计并基本稳定；</li>
+  <li>丝印标志清晰明了，能独立完成出GERBER等设计输出工作并校对；</li>
+  <li>具备基本的可制造性方面知识并用于实践，所设计板子50%以上可用于生产。</li>
+</ol>
+
+<h3 id="工作内容-1">工作内容：</h3>
+<ol>
+  <li>较复杂PCB的设计和修改（如调度机中除CPU板外的板，十六画面分割器板等）；</li>
+  <li>复杂PCB中规定部分的走线；</li>
+  <li>与自己设计PCB相关的调试；</li>
+  <li>对所有更低级PCB工程师的工作指导；</li>
+  <li>写相关的开发、调试日志；</li>
+  <li>必要时（指自己一定时间内暂时无相应的设计任务，或某一PCB设计工作时间紧迫，必须抽调或加强设计人员时，下同）妆任任意低级PCB工程师的工作。</li>
+</ol>
+
+<h3 id="工作职责-1">工作职责：</h3>
+<p>对PCB中自己设计部分负责。</p>
+
+<h2 id="中级pcb工程师可根据个人具体能力现细分为abc三档a最高b次之">中级PCB工程师（可根据个人具体能力现细分为A、B、C三档，A最高，B次之）</h2>
+
+<h3 id="能力要求-2">能力要求：</h3>
+<ol>
+  <li>能完全看懂各种原版器件手册和布线手册，能独立制作极复杂的封装，如放置开关，并保证各种能力完全正确（按实物测量至少保证插入），能自行根据原理和结构要求寻找合适器件或替换品；</li>
+  <li>熟练掌握至少一种PCB设计软件的操作和技巧并能制订详细的布线规则；</li>
+  <li>能根据系统要求提出各功能板块划分和整合意见，能对任意多个元件和网络的PCB独立或分工进行合理和各功能板块布局和布线，能在布局布线过程中随时考虑热设计、结构设计、SI、PI、EMC、美观、可制造性等方面的要求并提出解决方案，能对入门级和初级PCB工程师提供一些布局和布线中的要求和规则参考等；</li>
+  <li>能正确进行板的叠层结构设计，并在满足性能要求下尽量减少层数、降低成本；</li>
+  <li>具有较多的阻抗、时延、过冲、串扰、环路、信号回路、平面完整性、内层分割槽隙、信号端接等方面的高速和模拟PCB设计知识，能独立或在SI工程师等指导下完成关键信号和区域的SI仿真和分析并提出改进意见；</li>
+  <li>能在规则驱动下熟练手动或自动布线并修改通过，整板具有一定的美感，布线过程中能看出原理设计中80%以上低级错误并提出，能熟练正确进行引脚和门交换；</li>
+  <li>能与原理和结构设计工程师极好沟通，能看懂较复杂的机械图纸，并能提出一些原理、器件选择和结构上与PCB设计有关的合理改进意见，帮助系统设计早日成功；</li>
+  <li>测试点和丝印标记清晰明了、无差错，极少犯PCB设计中的低级错误，一般不会因PCB设计错误导致改版，对9）%以上的PCB加工厂家工程总是回馈能自行解决；</li>
+  <li>具备较多的可制造性方面知识并用天实践，所设计板子70%以上可用于直接量产。</li>
+</ol>
+
+<h3 id="工作内容-2">工作内容：</h3>
+<ol>
+  <li>极复杂PCB的设计和修改（如8路DVR底板、PC主板等）；</li>
+  <li>与自己设计PCB相关的调试和指定部分的SI仿真；</li>
+  <li>对所有更低级PCB工程师的工作指导和布线规则提供；</li>
+  <li>写相关的开发、调试日志；</li>
+  <li>制作和维护单位内部PCB标准封装库和标准布线模块；</li>
+  <li>必要时兼任任意更低级PCB工程师的工作。</li>
+</ol>
+
+<h3 id="工作职责-2">工作职责：</h3>
+<ol>
+  <li>对PCB中自己设计部分负责；</li>
+  <li>对单位内部PCB标准封装库和标准布线模块中自己设计部分负责；</li>
+  <li>对自己的SI仿真结果和解决方案负责。</li>
+</ol>
+
+<h2 id="工作岗位高级pcb工程师">工作岗位：高级PCB工程师</h2>
+<h3 id="能力要求-3">能力要求：</h3>
+<ol>
+  <li>掌握各种常见PCB设计软件之间的文档转换，转出文档基本可用于修改；</li>
+  <li>熟悉高速和模拟PCB设计中的所有要求，所设计或指导他人设计板子80%以上不存在相关问题；</li>
+  <li>具备丰富的可制造性方面知识并用于实践和指导工作，所设计或指导他人设计板子90%以上可用于直接量产；</li>
+  <li>熟练高速规则控制下的高密度布局、布线，并且所布模块或板子在稳定可靠的同时能做到80%以上非常具有美感；</li>
+  <li>非常富有创新性，能经常提出各种对提高PCB设计工作效率、PCB设计质量、系统中PCB结构分配等有建设性的提议。</li>
+</ol>
+
+<h3 id="工作内容-3">工作内容：</h3>
+<ol>
+  <li>参与系统设计中与PCB相关部分的分析、规划和仿真；</li>
+  <li>组织和进行PCB设计培训；</li>
+  <li>对所有更低级PCB工程师的工作指导和布线规则提供；</li>
+  <li>定相关的开发、调试日志；</li>
+  <li>SI仿真模型搜索、建立和规档；</li>
+  <li>整板和系统SI、PI、EMC仿真，PCB可制造性能评价，有问题PCB原因分析并提出有效的解决方案；</li>
+  <li>必要时兼任任意更低级PCB工程师的工作。</li>
+</ol>
+
+<h3 id="工作职责-3">工作职责：</h3>
+<ol>
+  <li>对所有自己的工作负责；</li>
+  <li>对所有对他人的指导工作负责。</li>
+</ol>
+
+<h1 id="一些小技巧">一些小技巧</h1>
+<p>作为一个电子工程师设计电路是一项必备的硬功夫，但是原理设计再完美，如果电路板设计不合理性能将大打折扣，严重时甚至不能正常工作。根据我的经验，我总结出以下一些PCB设计中应该注意的地方，希望能对您有所启示。</p>
+
+<p>不管用什么软件，PCB设计有个大致的程序，按顺序来会省时省力，因此我将按制作流程来介绍一下。（由于Protel界面风格与WINDODWS接近，操作习惯也相近，且有强大的仿真功能，使用的人比较多，将以此软件作说明。）</p>
+
+<p>原理图设计是前期准备工作，经常见到初学者为了省事直接就去画PCB板了，这样将得不偿失，对简单的板子，如果熟练流程，可以跳过。但是对于初学者一定要按流程来，这样一方面可以养成良好的习惯，另一方面对复杂的电路也只有这样才能避免出错。</p>
+
+<p>在画原理图时，层次设计时要注意各个文件最后要连接为一个整体，这同样对以后的工作有重要意义。由于，软件的差别有些软件会出现看似相连实际未连（电气性能上）的情况。如果不用相关检测工具检测，万一出了问题，等板子做好了才发现就晚了。因此一再强调按顺序来做的重要性，希望引起大家的注意。</p>
+
+<p>原理图是根据设计的项目来的，只要电性连接正确没什么好说的。下面我们重点讨论一下具体的制板程序中的问题。</p>
+
+<h2 id="制作物理边框">制作物理边框</h2>
+<p>封闭的物理边框对以后的元件布局、走线来说是个基本平台，也对自动布局起着约束作用，否则，从原理图过来的元件会不知所措的。但这里一定要注意精确，否则以后出现安装问题麻烦可就大了。还有就是拐角地方最好用圆弧，一方面可以避免尖角划伤工人，同时又可以减轻应力作用。以前我的一个产品老是在运输过程中有个别机器出现面壳PCB板断裂的情况，改用圆弧后就好了。</p>
+
+<h2 id="元件和网络的引入">元件和网络的引入</h2>
+
+<p>把元件和网络引人画好的边框中应该很简单，但是这里往往会出问题，一定要细心地按提示的错误逐个解决，不然后面要费更大的力气。这里的问题一般来说有以下一些：
+  元件的封装形式找不到，元件网络问题，有未使用的元件或管脚，对照提示这些问题可以很快搞定的。</p>
+
+<h2 id="元件的布局">元件的布局</h2>
+
+<p>元件的布局与走线对产品的寿命、稳定性、电磁兼容都有很大的影响，是应该特别注意的地方。一般来说应该有以下一些原则：</p>
+
+<h3 id="放置顺序">放置顺序</h3>
+
+<p>先放置与结构有关的固定位置的元器件，如电源插座、指示灯、开关、连接件之类，这些器件放置好后用软件的ＬＯＣＫ功能将其锁定，使之以后不会被误移动。再放置线路上的特殊元件和大的元器件，如发热元件、变压器、IC等。最后放置小器件。</p>
+
+<h3 id="注意散热">注意散热</h3>
+<p>元件布局还要特别注意散热问题。对于大功率电路，应该将那些发热元件如功率管、变压器等尽量靠边分散布局放置，便于热量散发，不要集中在一个地方，也不要离电容太近以免使电解液过早老化。</p>
+
+<h2 id="布线">布线</h2>
+
+<h3 id="布线原则">布线原则</h3>
+<p>走线的学问是非常高深的，每人都会有自己的体会，但还是有些通行的原则的。</p>
+<ol>
+  <li>高频数字电路走线细一些、短一些好</li>
+  <li>大电流信号、高电压信号与小信号之间应该注意隔离（隔离距离与要承受的耐压有 关，通常情况下在2KV时板上要距离2mm，在此之上以比例算还要加大，例如若要承受3KV的耐压测试，则高低压线路之间的距离应在3.5ｍｍ以上，许多情况下为避免爬电，还在印制线路板上的高低压之间开槽。）</li>
+  <li>两面板布线时，两面的导线宜相互垂直、斜交、或弯曲走线，避免相互平行，以减小寄生耦合；作为电路的输人及输出用的印制导线应尽量避兔相邻平行，以免发生回授，在这些导线之间最好加接地线。</li>
+  <li>走线拐角尽可能大于９０度，杜绝９０度以下的拐角，也尽量少用９０度拐角</li>
+  <li>同是地址线或者数据线，走线长度差异不要太大，否则短线部分要人为走弯线作补偿</li>
+  <li>走线尽量走在焊接面，特别是通孔工艺的PCB</li>
+  <li>尽量少用过孔、跳线</li>
+  <li>单面板焊盘必须要大，焊盘相连的线一定要粗，能放泪滴就放泪滴，一般的单面板厂家质量不会很好，否则对焊接和RE-WORK都会有问题</li>
+  <li>大面积敷铜要用网格状的，以防止波焊时板子产生气泡和因为热应力作用而弯曲，但在特殊场合下要考虑GND的流向，大小，不能简单的用铜箔填充了事，而是需要去走线</li>
+  <li>元器件和走线不能太靠边放，一般的单面板多为纸质板，受力后容易断裂，如果在边缘连线或放元器件就会受到影响</li>
+  <li>必须考虑生产、调试、维修的方便性</li>
+  <li>对模拟电路来说处理地的问题是很重要的，地上产生的噪声往往不便预料，可是一旦产生将会带来极大的麻烦，应该未雨绸缎。</li>
+  <li>对于功放电路，极微小的地噪声都会因为后级的放大对音质产生明显的影响。</li>
+  <li>在高精度A/D转换电路中，如果地线上有高频分量存在将会产生一定的温漂，影响放大器的工作。这时可以在板子的4角加退藕电容，一脚和板子上的地连，一脚连到安装孔上去（通过螺钉和机壳连），这样可将此分量虑去，放大器及A/D也就稳定了。</li>
+</ol>
+
+<h3 id="电磁兼容问题">电磁兼容问题</h3>
+<p>电磁兼容问题在目前人们对环保产品倍加关注的情况下显得更加重要了。一般来说电磁信号的来源有３个：信号源，辐射，传输线。</p>
+
+<h4 id="信号源">信号源</h4>
+<p>晶振是常见的一种高频信号源，在功率谱上晶振的各次谐波能量值会明显高出平均值。可行的做法是控制信号的幅度，晶振外壳接地，对干扰信号进行屏蔽，采用特殊的滤波电路及器件等。</p>
+
+<h4 id="特殊走线">特殊走线</h4>
+<p>蛇形走线，因为应用场合不同其作用也是不同的，在电脑的主板中用在一些时钟信号上，如PCI_CLK、AGP_CLK。
+它的作用有两点：</p>
+<ol>
+  <li>阻抗匹配</li>
+  <li>滤波电感</li>
+</ol>
+
+<p>对一些重要信号，如INTEL HUB架构中的HUBLink，一共13根，频率可达233MHZ，要求必须严格等长，以消除时滞造成的隐患，这时，蛇形走线是唯一的解决办法。</p>
+
+<p>一般来讲，蛇形走线的线距&gt;=２倍的线宽；若在普通PCB板中，除了具有滤波电感的作用外，还可作为收音机天线的电感线圈等等。</p>
+
+<h2 id="调整完善">调整完善</h2>
+<p>完成布线后，要做的就是对文字、个别元件、走线做些调整以及敷铜（这项工作不宜太早，否则会影响速度，又给布线带来麻烦），同样是为了便于进行生产、调试、维修。</p>
+
+<p>敷铜通常指以大面积的铜箔去填充布线后留下的空白区，可以铺GND的铜箔，也可以铺VCC的铜箔（但这样一旦短路容易烧毁器件，最好接地，</p>
+
+<p>除非不得已用来加大电源的导通面积，以承受较大的电流才接VCC）。包地则通常指用两根地线（TRAC）包住一撮有特殊要求的信号线，防止它被别人干扰或干扰别人。</p>
+
+<p>如果用敷铜代替地线一定要注意整个地是否连通，电流大小、流向与有无特殊要求，以确保减少不必要的失误。</p>
+
+<h2 id="检查核对网络">检查核对网络</h2>
+
+<p>有时候会因为误操作或疏忽造成所画的板子的网络关系与原理图不同，这时检察核对是很有必要的。所以画完以后切不可急于交给制版厂家，应该先做核对，后再进行后续工作。</p>
+
+<h2 id="使用仿真功能">使用仿真功能</h2>
+
+<p>完成这些工作后，如果时间允许还可以进行软件仿真。特别是高频数字电路，这样可以提前发现一些问题，大大减少以后的调试工作量。</p>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to 路人A的点滴记录</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <form method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+    </div>
+    <button class="" type="submit" disabled><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+                </section>
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/abraham.jpg" alt="huangliang" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/huangliang">Liam Hudson</a></h4>
+                                
+                                    <p>嵌入式软件工程师 嵌入式硬件工程师 旅游爱好者 徒步爱好者 摄影爱好者 python用户</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/huangliang">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/blog-cover.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; 路人A的点滴记录 &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/hardware/">Hardware</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/The-Balance-filter">Balance Filter</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/hardware/">
+                                
+                                    See all 1 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/Instrument-amplifier-performance-criteria">
+                <div class="post-card-image" style="background-image: url(/assets/images/welcome.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/Instrument-amplifier-performance-criteria">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Filter</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">仪表放大器的性能指标</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/abraham.jpg" alt="Liam Hudson" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/huangliang/">Liam Hudson</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/the-businessman-and-fisherman">
+                <div class="post-card-image" style="background-image: url(/assets/images/water.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/the-businessman-and-fisherman">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Fables</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">The Businessman & The Fisherman</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/hannah.jpg" alt="Hannah Wolfe" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/hannah/">Hannah Wolfe</a>
+                        </span>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="http://localhost:4000/">
+            
+                <img src="/assets/images/favicon.png" alt="路人A的点滴记录 icon" />
+            
+            <span>路人A的点滴记录</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">我理解的PCB工程师分级</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%E6%88%91%E7%90%86%E8%A7%A3%E7%9A%84PCB%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%86%E7%BA%A7&amp;url=https://jekyller.github.io/jasper2/pcb-standard"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://jekyller.github.io/jasper2/pcb-standard"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="http://localhost:4000/">路人A的点滴记录</a> &copy; 2020</section>
+                <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyller/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                
+                    <img class="subscribe-overlay-logo" src="/assets/images/blog-icon.png" alt="路人A的点滴记录" />
+                
+                <h1 class="subscribe-overlay-title">Subscribe to 路人A的点滴记录</h1>
+                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+                <form method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+    </div>
+    <button class="" type="submit" disabled><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+            </div>
+        </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69281367-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

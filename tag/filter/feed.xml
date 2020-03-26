@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/filter/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-02-29T23:25:34+08:00</updated>
+  <id>http://localhost:4000/tag/filter/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">路人A的点滴记录 | </title>
+  
+
+  
+    <subtitle>记录我的一些经历</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">仪表放大器的性能指标</title>
+      <link href="http://localhost:4000/Instrument-amplifier-performance-criteria" rel="alternate" type="text/html" title="仪表放大器的性能指标" />
+      <published>2015-11-09T06:12:00+08:00</published>
+      <updated>2015-11-09T06:12:00+08:00</updated>
+      <id>http://localhost:4000/Instrument-amplifier-performance-criteria</id>
+      <content type="html" xml:base="http://localhost:4000/Instrument-amplifier-performance-criteria">&lt;p&gt;仪表放大器的性能指标要求&lt;/p&gt;
+
+&lt;p&gt;在硬件电路设计中，硬件工程师常常需要选型一个或多种仪表放大器应用于各种精密放大的场合。&lt;/p&gt;
+
+&lt;h2 id=&quot;那什么是仪表放大器&quot;&gt;那什么是仪表放大器？&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://baike.baidu.com/item/%E4%BB%AA%E8%A1%A8%E6%94%BE%E5%A4%A7%E5%99%A8&quot;&gt;仪表放大器&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;仪表放大器的主要性能指标有哪些&quot;&gt;仪表放大器的主要性能指标有哪些？&lt;/h2&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Liam Hudson</name>
+        
+        
+      </author>
+
+      
+        <category term="[&quot;Hardware&quot;]" />
+      
+
+      
+        <category term="Filter" />
+      
+
+      
+        <summary type="html">仪表放大器的性能指标要求</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

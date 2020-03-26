@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/ruby/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-02-29T23:25:34+08:00</updated>
+  <id>http://localhost:4000/tag/ruby/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">路人A的点滴记录 | </title>
+  
+
+  
+    <subtitle>记录我的一些经历</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Ruby Gems mirrors修改</title>
+      <link href="http://localhost:4000/ruby-gems-mirrors" rel="alternate" type="text/html" title="Ruby Gems mirrors修改" />
+      <published>2018-06-13T22:18:00+08:00</published>
+      <updated>2018-06-13T22:18:00+08:00</updated>
+      <id>http://localhost:4000/ruby-gems-mirrors</id>
+      <content type="html" xml:base="http://localhost:4000/ruby-gems-mirrors">&lt;p&gt;镜像地址修改方式&lt;/p&gt;
+
+&lt;p&gt;这里我使用的是清华大学的镜像站&lt;/p&gt;
+
+&lt;h3 id=&quot;gems&quot;&gt;Gems&lt;/h3&gt;
+&lt;p&gt;使用以下命令替换 gems 默认源&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 添加 TUNA 源并移除默认源&lt;/span&gt;
+gem sources &lt;span class=&quot;nt&quot;&gt;--add&lt;/span&gt; https://mirrors.tuna.tsinghua.edu.cn/rubygems/ &lt;span class=&quot;nt&quot;&gt;--remove&lt;/span&gt; https://rubygems.org/
+&lt;span class=&quot;c&quot;&gt;# 列出已有源&lt;/span&gt;
+gem sources &lt;span class=&quot;nt&quot;&gt;-l&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 应该只有 TUNA 一个&lt;/span&gt;
+或者，编辑 ~/.gemrc，将 https://mirrors.tuna.tsinghua.edu.cn/rubygems/ 加到 sources 字段。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;bundler&quot;&gt;bundler&lt;/h3&gt;
+&lt;p&gt;使用以下命令替换 bundler 默认源&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;user&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bash bundle config mirror.https://rubygems.org https://mirrors.tuna.tsinghua.edu.cn/rubygems
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Liam Hudson</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ruby" />
+      
+
+      
+        <summary type="html">镜像地址修改方式</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

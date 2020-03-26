@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/driver/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-02-29T23:25:34+08:00</updated>
+  <id>http://localhost:4000/tag/driver/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">路人A的点滴记录 | </title>
+  
+
+  
+    <subtitle>记录我的一些经历</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Linux内核驱动之模块结构</title>
+      <link href="http://localhost:4000/linux-kernel-driver-struct-modules" rel="alternate" type="text/html" title="Linux内核驱动之模块结构" />
+      <published>2016-07-19T04:38:00+08:00</published>
+      <updated>2016-07-19T04:38:00+08:00</updated>
+      <id>http://localhost:4000/linux-kernel-driver-struct-modules</id>
+      <content type="html" xml:base="http://localhost:4000/linux-kernel-driver-struct-modules">&lt;p&gt;Linux内核驱动开发之模块结构&lt;/p&gt;
+
+&lt;h2 id=&quot;基本结构&quot;&gt;基本结构&lt;/h2&gt;
+&lt;p&gt;在Linux内核驱动模块开发时，每一个模块程序有其固定的框架结构，包括&lt;code class=&quot;highlighter-rouge&quot;&gt;module_init()&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;module_exit()&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;xxx_open()&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;xxx_close()&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;xxx_ioctl()&lt;/code&gt;等等。&lt;/p&gt;
+&lt;h3 id=&quot;最基本的模块结构&quot;&gt;最基本的模块结构&lt;/h3&gt;
+
+&lt;p&gt;在模块框架中，一个模块所必须的接口是&lt;code class=&quot;highlighter-rouge&quot;&gt;module_init()&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;module_exit()&lt;/code&gt;，以及一些模块信息。&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;必须实现的模块接口\left\{
+    \begin{aligned}
+    module\_init(......) \\
+    module\_exit(......) \\
+    \end{aligned}
+    \right.&lt;/script&gt;
+
+&lt;p&gt;因为Linux是&lt;a href=&quot;https://baike.baidu.com/item/%E5%BC%80%E6%94%BE%E6%BA%90%E4%BB%A3%E7%A0%81/114160?fromtitle=Open%20Source&quot;&gt;open source&lt;/a&gt;，所以会在一个模块中包含一些关于模块的信息，但并不是必须的。&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;模块信息的一些设置 \left\{
+    \begin{aligned}
+    MODULE\_DESCRIPTION(......) \\
+    MODULE\_AUTHOR(......) \\
+    MODULE\_LICENSE(......) \\
+    MODULE\_VERSION(......) \\
+    \end{aligned}
+    \right.&lt;/script&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Liam Hudson</name>
+        
+        
+      </author>
+
+      
+        <category term="[&quot;linux&quot;]" />
+      
+
+      
+        <category term="driver" />
+      
+
+      
+        <summary type="html">Linux内核驱动开发之模块结构</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

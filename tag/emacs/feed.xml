@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="http://localhost:4000/tag/emacs/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-02-29T23:25:34+08:00</updated>
+  <id>http://localhost:4000/tag/emacs/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">路人A的点滴记录 | </title>
+  
+
+  
+    <subtitle>记录我的一些经历</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Emacs操作系统入门- 基本操作</title>
+      <link href="http://localhost:4000/emacs-move-in-window" rel="alternate" type="text/html" title="Emacs操作系统入门- 基本操作" />
+      <published>2011-04-24T06:12:00+08:00</published>
+      <updated>2011-04-24T06:12:00+08:00</updated>
+      <id>http://localhost:4000/emacs-move-in-window</id>
+      <content type="html" xml:base="http://localhost:4000/emacs-move-in-window">&lt;p&gt;Emacs操作系统入门 —— 基本操作&lt;/p&gt;
+
+&lt;h2 id=&quot;基本简介&quot;&gt;基本简介&lt;/h2&gt;
+&lt;p&gt;Emacs是一个大而且全的系统，我们从她五六百页的Manual中就可以略微窥见其规模。
+而且她有自己的编程语言E-lisp，是古老但一直没有过时的语言Lisp的变种，AutoCAD的二次开发也是用的Lisp的另一个变种。&lt;/p&gt;
+
+&lt;p&gt;编辑器有很多，有的编辑器真的非常好用，也有很强的扩展性，那为什么要选择Emacs呢，我想选择Emacs的每一个人都有着自己的想法吧，有的可能是希望有一整套Lisp的环境，或者希望折腾出属于自己的编辑器，在或者希望在各个平台使用一套熟悉的编辑器软件等等种种理由，一千个读者有一千个哈姆雷特，存在既有价值。&lt;/p&gt;
+
+&lt;h2 id=&quot;基本编辑操作&quot;&gt;基本编辑操作&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/emacs_startup_screen.png&quot; width=&quot;80%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;下面将介绍关于Emacs的一些基本操作，但是在正式开讲之前需要介绍一个最重要的操作那就是查看帮助文档的操作&lt;code class=&quot;highlighter-rouge&quot;&gt;C-h C-f&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;C+h C+v&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;C+h C+k&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;C+h m&lt;/code&gt;，这个操作基本上讲陪伴我们一生。&lt;/p&gt;
+&lt;h3 id=&quot;打开文件&quot;&gt;打开文件&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;在Emacs中，打开文件是使用&lt;code class=&quot;highlighter-rouge&quot;&gt;C+c C+f&lt;/code&gt;命令&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;保存与关闭文件&quot;&gt;保存与关闭文件&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;在Emacs中，关闭单个文件，其实是关闭这个文件的&lt;strong&gt;buffer&lt;/strong&gt;，是使用&lt;code class=&quot;highlighter-rouge&quot;&gt;C+x k&lt;/code&gt;命令。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;退出emacs&quot;&gt;退出Emacs&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;想要退出Emacs，在GUI当然可以点×关闭，也可以用命令&lt;code class=&quot;highlighter-rouge&quot;&gt;C+x C+c&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;至此，我们已经可以在Emacs进行初步的编辑工作了。&lt;/p&gt;
+
+&lt;h2 id=&quot;基本光标移动操作&quot;&gt;基本光标移动操作&lt;/h2&gt;
+
+&lt;p&gt;经过之前的介绍，Emacs已经具备成为Notepad的替代品的可能。那么接下来更进一步，我们将介绍如何在Emacs的编辑过程快速的移动光标位置。&lt;/p&gt;
+
+&lt;h3 id=&quot;基础移动上下左右&quot;&gt;基础移动——上下左右&lt;/h3&gt;
+
+&lt;style&gt;
+table th:first-of-type {
+    width: 6cm;}
+table th:nth-of-type(2) {
+    width: 4cm;}
+table th:nth-of-type(3) {
+    width: 4cm;}
+&lt;/style&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;功能&lt;/th&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;向上移动&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C+p&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;向下移动&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C+n&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;向左移动&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C+b&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;向右移动&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C+f&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;行中移动行首行尾&quot;&gt;行中移动——行首、行尾&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;功能&lt;/th&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;移至行首&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C+a&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;移至行尾&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C+e&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;段落中移动段落头段落尾&quot;&gt;段落中移动——段落头、段落尾&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;功能&lt;/th&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;移至下一个段落的头&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;M+{&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;移至上一个段落的头&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;M+}&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;页中移动&quot;&gt;页中移动&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;功能&lt;/th&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;向前翻一页&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C+v&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;向后翻一页&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;M+v&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;移动到下一页&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C+x [&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;移动到上一页&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C+x ]&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;移动到某行&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;M+g g&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;移动到某字符&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C+g c&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;将光标移动到屏幕中见&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;C+l&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;整个文件中的移动&quot;&gt;整个文件中的移动&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;功能&lt;/th&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;移动到文件头&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;M+&amp;lt;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;移动到文件尾&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;M+&amp;gt;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;到这里我们就可以在字里行间快速的游走了呢！&lt;/p&gt;
+
+&lt;h2 id=&quot;基本的编辑操作&quot;&gt;基本的编辑操作&lt;/h2&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Liam Hudson</name>
+        
+        
+      </author>
+
+      
+        <category term="[&quot;tools&quot;]" />
+      
+
+      
+        <category term="emacs" />
+      
+
+      
+        <summary type="html">Emacs操作系统入门 —— 基本操作</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
